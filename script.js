@@ -9,10 +9,11 @@ new Vue({
         getRandomEmail() {
 
             const ajaxMail = [];
+            const totalMail = 10
 
             this.loading = true
 
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < totalMail; i++) {
                 axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
                 .then((resp) => {
                     
@@ -21,7 +22,7 @@ new Vue({
                     ajaxMail.push(resp.data.response);
 
 
-                    if (ajaxMail.length === 10) {
+                    if (ajaxMail.length === totalMail) {
                         this.mailList.push(...ajaxMail)
                         this.loading = false
 

@@ -14,8 +14,10 @@
 
         <button @click="getRandomEmail">Genera</button>
 
+
+        
         <ul v-if="loading === false">
-            <li v-for="email in randomEmail">
+            <li v-for="email in mailList">
                 {{ email }}
             </li>
         </ul>

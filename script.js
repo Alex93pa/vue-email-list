@@ -7,7 +7,7 @@ new Vue({
     },
     methods: {
         getRandomEmail() {
-
+            this.mailList = [];
             const ajaxMail = [];
             const totalMail = 10
 
